@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<style>
+			* { margin: 0; padding: 0;}
+			.webgl {
+				position: fixed;
+				top: 0;
+				left: 0;
+				outline: none;
+			}
+			html, body {
+				overflow: hidden;
+			}
+			#title{
+				position:absolute;
+				font-family: monospace;
+				left: 20px;
+				top: 20px;
+			}
+			#stats{
+				position: absolute;
+				right: 20px;
+				top: 20px;
+				font-family: monospace;
+			}
+			#copyright{
+				position: absolute;
+				left: 20px;
+				bottom: 20px;
+				font-family: monospace;
+			}
+		</style>
+		<title>Cookie.io</title>
+		<script type="importmap"> {
+			"imports": {
+				"three": "https://cdn.jsdelivr.net/npm/three@v0.149.0/build/three.module.js",
+      			"three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.149.0/examples/jsm/"
+    			}
+			}
+		</script>
+		<script type="module" src="./main.js"></script>
+	</head>
+	<body>
+		<div id="title">
+			<i style="font-weight: bold; font-style: normal; font-size: 40px;">Cookie.io</i><i style="font-style: normal; font-size: 12px;"> by TeamLU</i><br/>
+			<i style="font-style: normal; font-size: 18px;">0.4.4</i>
+		</div>
+		<div id="stats">
+			<p>
+				cookieRotationX : <i id="cookieRotationX"></i><br/>
+				cookieRotationY : <i id="cookieRotationY"></i><br/>
+				sceneRotationX  : <i id="sceneRotationX"></i><br/>
+				sceneRotationY  : <i id="sceneRotationY"></i><br/>
+				scenePositionY  : <i id="scenePositionY"></i><br/>
+				wheelDeltaY     : <i id="wheelDeltaY"></i><br/>
+			</p>
+		</div>
+		<div id="copyright">
+			@ Copyright 2024 TeamLU Limited
+		</div>
+		<div id="three">
+			<canvas id="canvathree"></canvas>
+		</div>
+	</body>
+</html>
