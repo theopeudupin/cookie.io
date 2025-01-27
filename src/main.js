@@ -98,7 +98,7 @@ addCookie();
 
 function animate() {
 
-	if(cookie) {
+	if(cookie && !mouseDown) {
 
 		cookie.rotation.x += 0.005;
 		cookie.rotation.y += 0.01;
