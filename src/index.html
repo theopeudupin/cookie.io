@@ -25,6 +25,25 @@
 				top: 20px;
 				font-family: monospace;
 			}
+			#statsbutton{
+				display: block;
+			}
+			#dropdownstatsbuttonup,#dropdownstatsbuttondown{
+				margin-right: auto;
+			}
+			#dropdownstatsbuttonup{
+				margin-top: 10px;
+			}
+			#dropdownstats {
+				display: block;
+			}
+			#interactiveui{
+				position: absolute;
+				right: 20px;
+				bottom: 20px;
+				font-family: monospace;
+				padding-top: 10px;
+			}
 		</style>
 		<title>Cookie.io</title>
 		<script type="importmap"> {
@@ -39,10 +58,10 @@
 	<body>
 		<div id="title">
 			<i style="font-weight: bold; font-style: normal; font-size: 40px;">Cookie.io</i><br/>
-			<i style="font-style: normal; font-size: 18px;">0.1.0</i>
+			<i style="font-style: normal; font-size: 18px;">0.2.0</i>
 		</div>
 		<div id="stats">
-			<p>
+			<p id="dropdownstats" style="display: none">
 				cookieRotationX : <i id="cookieRotationX"></i><br/>
 				cookieRotationY : <i id="cookieRotationY"></i><br/>
 				sceneRotationX  : <i id="sceneRotationX"></i><br/>
@@ -50,6 +69,13 @@
 				scenePositionY  : <i id="scenePositionY"></i><br/>
 				wheelDeltaY     : <i id="wheelDeltaY"></i><br/>
 			</p>
+			<div id="statsbutton">
+				<img id="dropdownstatsbuttonup" style="display: none" src="img/up-arrow.png" height="30px" weight="30px"/>
+				<img id="dropdownstatsbuttondown" src="img/down-arrow.png" height="30px" weight="30px"/>
+			</div>
+		</div>
+		<div id="interactiveui">
+			<img id="rotationCookie" style="padding-top: 10px;" src="img/rotation.png" height="30px" weight="30px"/>
 		</div>
 		<div id="three">
 			<canvas id="canvathree"></canvas>
